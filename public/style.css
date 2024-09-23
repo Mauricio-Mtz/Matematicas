@@ -18,7 +18,7 @@
 /* Estilo general del cuerpo */
 body {
     margin: 0;
-    padding: 20px 0 20px 0;
+    padding: 5px;
     font-family: var(--font-family);
     background-color: var(--background-color);
     color: var(--text-color);
@@ -26,6 +26,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Título principal */
@@ -33,36 +35,45 @@ h1 {
     color: var(--heading-color);
     font-size: 2.1rem;
     margin-bottom: 20px;
-    padding: 15px 0 15px 0;
-    max-width: 100%;
     text-align: center;
     width: 100%;
+    padding: 0 15px;
 }
 
-/* Corregir el selector de la clase calculator-container */
+h3 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Contenedor principal */
 .calculator-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1000px;
     width: 100%;
-    gap: 20px; /* Espacio entre los dos elementos */
+    gap: 20px;
+    padding: 0 15px; /* Añadir padding para mayor espacio en los lados */
 }
 
 /* Estilo del formulario */
-form {
+form, #result {
     background-color: var(--form-background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 100%;
-    
+    box-sizing: border-box;
 }
 
 /* Estilo para contenedor de las ecuaciones */
 .equation-container {
-    padding: 0px 20px; /* Reducido para ajustar mejor el contenido */
+    padding: 0px 20px;
 }
 
 /* Estilo de las ecuaciones */
@@ -74,7 +85,6 @@ form {
     margin-bottom: 10px;
 }
 
-/* Estilo de los números en las ecuaciones */
 .equation-row input {
     width: 50px;
     padding: 5px;
@@ -84,13 +94,6 @@ form {
     border: 2px solid var(--border-color);
     border-radius: 5px;
     color: var(--input-text-color);
-}
-
-/* Estilo de los operadores y variables (x, y, =) */
-.equation-row span {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin: 0 5px;
 }
 
 /* Botón para enviar el formulario */
@@ -117,36 +120,43 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    width: 100%;
     text-align: left;
-    flex: 1; /* Permite que el área de resultados ocupe una parte del espacio */
+    box-sizing: border-box;
 }
 
-
-  
-  .result-box {
+.result-box {
     padding: 15px;
     background-color: #293247;
     border-left: 5px solid #4a90e2;
     margin-bottom: 20px;
     border-radius: 5px;
-  }
-  
-  .procedure-list {
+}
+
+.procedure-list {
     list-style-type: decimal;
     padding-left: 20px;
-  }
-  
-  .procedure-list li {
+}
+
+.procedure-list li {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #293247;
     border-radius: 5px;
     border-left: 4px solid #4a90e2;
     text-align: left;
-  }
-  
-  .procedure-list li:hover {
-    background-color: #293247;
-  }
+}
+
+/* Adaptaciones responsivas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form, #result {
+        max-width: 90%; /* Aumentar ancho en pantallas pequeñas */
+    }
+
+    .calculator-container {
+        padding: 0 10px;
+    }
+}

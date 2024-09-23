@@ -18,7 +18,7 @@ app.get('/solve', (req, res) => {
   }
 
   // Ejecutar el script de Python con los valores proporcionados
-  exec(`python solve.py ${x1} ${y1} ${z1} ${x2} ${y2} ${z2}`, (error, stdout, stderr) => {
+  exec(`python public/solve.py ${x1} ${y1} ${z1} ${x2} ${y2} ${z2}`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error ejecutando Python: ${error}`);
       console.error(`stderr: ${stderr}`);

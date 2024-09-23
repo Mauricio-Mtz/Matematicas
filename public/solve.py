@@ -25,22 +25,22 @@ step5 = []
 # Calcular el determinante principal (D)
 D = x1 * y2 - x2 * y1
 step1.append(f"Determinante principal (D)")
-step1.append(f"= ( x1*y2 ) - ( x2*y1 ) ")
-step1.append(f"= ( {x1}*{y2} ) - ( {x2}*{y1} ) ")
-step1.append(f"= {D}")
+step1.append(f"D = ( x1*y2 ) - ( x2*y1 ) ")
+step1.append(f"D = ( {x1}*{y2} ) - ( {x2}*{y1} ) ")
+step1.append(f"D = {D}")
 
 # Calcular los determinantes Dx y Dy
 Dx = z1 * y2 - z2 * y1
 Dy = x1 * z2 - x2 * z1
 step2.append(f"Determinante Dx")
-step2.append(f"= ( z1*y2 ) -( z2*y1 )")
-step2.append(f"= ( {z1}*{y2} ) - ( {z2}*{y1} )")
-step2.append(f"= {Dx}")
+step2.append(f"Dx = ( z1*y2 ) -( z2*y1 )")
+step2.append(f"Dx = ( {z1}*{y2} ) - ( {z2}*{y1} )")
+step2.append(f"Dx = {Dx}")
 
-step3.append(f"Determinante Dy ")
-step3.append(f"= ( x1*z2 ) - ( x2*z1 )")
-step3.append(f"= ( {x1}*{z2} ) - ( {x2}*{z1} )")
-step3.append(f"= {Dy}")
+step3.append(f"Determinante Dy")
+step3.append(f"Dy = ( x1*z2 ) - ( x2*z1 )")
+step3.append(f"Dy = ( {x1}*{z2} ) - ( {x2}*{z1} )")
+step3.append(f"Dy = {Dy}")
 
 # Intentar resolver el sistema usando la regla de Cramer
 try:
@@ -65,14 +65,14 @@ try:
     stry = 'y = ' + str(y_fraction)   
     # Añadir los pasos de la solución
     step4.append(f"Solución: x ")
-    step4.append(f"= ( Dx ) / ( D ) ")
-    step4.append(f"= ( {Dx} ) / ( {D} )")
-    step4.append(f"= {x_fraction}")
+    step4.append(f"x = ( Dx ) / ( D ) ")
+    step4.append(f"x = ( {Dx} ) / ( {D} )")
+    step4.append(f"x = {x_fraction}")
 
     step5.append(f"Solución: y")
-    step5.append(f"= ( Dy ) / ( D )")
-    step5.append(f"= ( {Dy} ) / ( {D} )")
-    step5.append(f"= {y_fraction}")
+    step5.append(f"y = ( Dy ) / ( D )")
+    step5.append(f"y = ( {Dy} ) / ( {D} )")
+    step5.append(f"y = {y_fraction}")
 
     # Crear un diccionario con el resultado y los pasos
     result = {
